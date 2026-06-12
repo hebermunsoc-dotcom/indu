@@ -2,110 +2,233 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Happy Birthday ❤️</title>
+<title>Happy Birthday Thangaaa Mayiluuuuuuuuu ❤️</title>
+
+<meta name="theme-color" content="#0A0A0A">
 
 <link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<section class="hero">
+<!-- LOADING SCREEN -->
 
-<img src="images/cover.jpg" class="hero-img">
+<div id="loader">
 
-<div class="overlay">
-
-<h1>Happy Birthday Thangaaa Mayiluuuuuuuuu🎂</h1>
-
-<p>Scroll Down babe ❤️</p>
+    <h1>Loading Memories ❤️</h1>
+    <p>Please wait...</p>
 
 </div>
 
+<!-- BACKGROUND MUSIC -->
+
+<audio id="bgMusic" loop>
+
+    <source src="music/song.mp3" type="audio/mpeg">
+
+</audio>
+
+<button id="musicBtn">
+
+    🎵 Play Our Song
+
+</button>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+    <img src="images/cover.jpg" class="hero-img" alt="Cover Photo">
+
+    <div class="overlay">
+
+        <h1>Happy Birthday</h1>
+
+        <h2>Thangaaa Mayiluuuuuuuuu ❤️</h2>
+
+        <p>
+            Today isn't just your birthday.
+            It's a celebration of every smile,
+            every memory,
+            and every moment that made you special.
+        </p>
+
+        <div class="scroll-indicator">
+
+            ↓ Scroll Down ↓
+
+        </div>
+
+    </div>
+
 </section>
 
+<!-- MEMORY 1 -->
 
 <section class="memory hidden">
 
-<h2>The Day We Met ✨</h2>
+    <span class="date">The Beginning ✨</span>
 
-<img src="images/memory1.jpg">
+    <h2>The Day Everything Started</h2>
 
-<p>
-This was where our friendship started...
-and little did we know how many memories were waiting for us.
-</p>
+    <img src="images/memory1.jpg"
+         alt="First Memory">
+
+    <p>
+
+        I still remember this moment.
+
+        Neither of us knew that a simple meeting
+        would become a collection of unforgettable memories.
+
+        Looking back now,
+        I'm grateful it happened.
+
+    </p>
 
 </section>
 
+<!-- MEMORY 2 -->
 
 <section class="memory hidden">
 
-<h2>The Funniest Moment 😂</h2>
+    <span class="date">A Day To Remember 😂</span>
 
-<img src="images/memory2.jpg">
+    <h2>The Funniest Memory</h2>
 
-<p>
-One of the moments I'll never forget.
-Still makes me laugh whenever I think about it.
-</p>
+    <img src="images/memory2.jpg"
+         alt="Funny Memory">
+
+    <p>
+
+        This memory still makes me laugh.
+
+        Every time I think about it,
+        I remember how much fun we had.
+
+        Some moments never get old.
+
+    </p>
 
 </section>
 
+<!-- MEMORY 3 -->
 
 <section class="memory hidden">
 
-<h2>The Best Adventure 🚀</h2>
+    <span class="date">Adventure Time 🚀</span>
 
-<img src="images/memory3.jpg">
+    <h2>Our Best Journey</h2>
 
-<p>
-Every journey becomes better when you're there.
-</p>
+    <img src="images/memory3.jpg"
+         alt="Adventure">
+
+    <p>
+
+        Some places become special because of who we visit them with.
+
+        This was one of those moments.
+
+    </p>
 
 </section>
 
+<!-- VIDEO -->
 
 <section class="memory hidden">
 
-<h2>A Special Video 🎥</h2>
+    <span class="date">A Little Movie 🎥</span>
 
-<video controls>
-<source src="videos/special.mp4" type="video/mp4">
-</video>
+    <h2>Special Moments</h2>
+
+    <video controls poster="images/video-cover.jpg">
+
+        <source src="videos/special.mp4"
+                type="video/mp4">
+
+    </video>
+
+    <p>
+
+        Some memories deserve more than a photo.
+
+    </p>
 
 </section>
 
+<!-- BIRTHDAY MESSAGE -->
 
 <section class="final hidden">
 
-<img src="images/final.jpg">
+    <img src="images/final.jpg"
+         alt="Birthday Photo">
 
-<h1>Happy Birthday ❤️</h1>
+    <h1>Happy Birthday ❤️</h1>
 
-<p>
-Thank you for being part of my life.
+    <p>
 
-I hope this year brings you happiness,
-success,
-good health,
-and countless beautiful memories.
+        Thank you for being part of my life.
 
-Never stop being the amazing person you are. 🌟
-</p>
+        Thank you for the memories,
+        the laughter,
+        the support,
+        and all the moments that made life brighter.
 
-<button id="celebrateBtn">
-Celebrate 🎉
-</button>
+        I hope this year brings you happiness,
+        success,
+        good health,
+        peace,
+        and countless beautiful memories.
 
-<div id="confettiText"></div>
+        You deserve every good thing coming your way.
+
+    </p>
+
+    <button id="celebrateBtn">
+
+        Open Birthday Surprise 🎁
+
+    </button>
+
+    <div id="confettiText"></div>
+
+</section>
+
+<!-- FINAL SURPRISE -->
+
+<section class="memory hidden">
+
+    <h2>One Last Thing ❤️</h2>
+
+    <p>
+
+        No matter how many birthdays pass,
+
+        I hope you never lose that smile,
+        that kindness,
+        and that beautiful heart.
+
+        Stay happy.
+
+        Stay amazing.
+
+        Stay you.
+
+        Happy Birthday Thangaaa Mayiluuuuuuuuu ❤️
+
+    </p>
 
 </section>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
