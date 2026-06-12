@@ -1,11 +1,37 @@
-function showSurprise() {
+const hiddenElements =
+document.querySelectorAll(".hidden");
 
-    let surprise = document.getElementById("surprise");
+const observer =
+new IntersectionObserver((entries)=>{
 
-    if(surprise.style.display === "block"){
-        surprise.style.display = "none";
-    } else {
-        surprise.style.display = "block";
-    }
+entries.forEach((entry)=>{
 
+if(entry.isIntersecting){
+entry.target.classList.add("show");
 }
+
+});
+
+});
+
+hiddenElements.forEach((el)=>{
+observer.observe(el);
+});
+
+
+document
+.getElementById("celebrateBtn")
+.addEventListener("click",()=>{
+
+const text =
+document.getElementById("confettiText");
+
+text.innerHTML = `
+🎉 🎊 🎉 🎊 🎉
+<br>
+You Deserve The Best Birthday Ever!
+<br>
+🎂 ❤️ 🌟
+`;
+
+});
