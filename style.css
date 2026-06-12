@@ -1,100 +1,33 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
-}
-
 body{
-background:#111;
-color:white;
-overflow-x:hidden;
-}
+    background:
+    linear-gradient(
+        135deg,
+        #050505 0%,
+        #111111 40%,
+        #1b1b1b 100%
+    );
 
-.hero{
-height:100vh;
-position:relative;
-}
+    color:white;
+    overflow-x:hidden;
+}body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
 
-.hero-img{
-width:100%;
-height:100vh;
-object-fit:cover;
-}
+    background:
+    radial-gradient(
+        circle at top right,
+        rgba(212,175,55,0.15),
+        transparent 35%
+    ),
+    radial-gradient(
+        circle at bottom left,
+        rgba(255,255,255,0.05),
+        transparent 40%
+    );
 
-.overlay{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-text-align:center;
-background:rgba(0,0,0,.5);
-padding:30px;
-border-radius:20px;
-}
-
-.overlay h1{
-font-size:4rem;
-margin-bottom:20px;
-}
-
-.memory,
-.final{
-min-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-padding:50px;
-text-align:center;
-}
-
-.memory img,
-.final img{
-width:70%;
-max-width:700px;
-border-radius:20px;
-margin-bottom:25px;
-}
-
-.memory video{
-width:70%;
-border-radius:20px;
-}
-
-.memory h2{
-margin-bottom:20px;
-font-size:2.5rem;
-}
-
-.memory p,
-.final p{
-max-width:700px;
-line-height:1.8;
-font-size:1.2rem;
-}
-
-.hidden{
-opacity:0;
-transform:translateY(100px);
-transition:all 1s ease;
-}
-
-.show{
-opacity:1;
-transform:translateY(0);
-}
-
-button{
-margin-top:30px;
-padding:15px 30px;
-font-size:1.1rem;
-border:none;
-border-radius:30px;
-cursor:pointer;
-}
-
-#confettiText{
-margin-top:30px;
-font-size:2rem;
+    pointer-events:none;
 }
