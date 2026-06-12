@@ -1,47 +1,33 @@
-document
-.getElementById("celebrateBtn")
-.addEventListener("click",()=>{
+function showSurprise() {
 
-const text =
-document.getElementById("confettiText");
+    const surpriseSection =
+    document.querySelector(".hidden-video");
 
-text.innerHTML = `
-🎉 🎊 🎉 🎊 🎉
-<br>
-UMAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHH ❤️
-<br>
-🎂 ❤️ 🌟
-`;
+    surpriseSection.style.display = "block";
 
-for(let i=0;i<30;i++){
+    const surprise =
+    document.getElementById("surprise");
 
-const heart =
-document.createElement("div");
+    surprise.insertAdjacentHTML(
+        "afterbegin",
+        `
+        <h2>🎉 HAPPY BIRTHDAY 🎉</h2>
 
-heart.innerHTML = "❤️";
+        <p style="font-size:1.3rem; margin:20px;">
+        ❤️ Thangaaa Mayiluuuuuuuuu ❤️
+        <br><br>
+        Wishing you happiness, success,
+        laughter and lots of beautiful memories.
+        <br><br>
+        UMAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHH 😘
+        </p>
+        `
+    );
 
-heart.style.position = "fixed";
-heart.style.left = Math.random()*100 + "vw";
-heart.style.top = "-20px";
-heart.style.fontSize = "2rem";
-heart.style.zIndex = "9999";
+    document.querySelector("button").style.display = "none";
 
-document.body.appendChild(heart);
-
-heart.animate(
-[
-{transform:"translateY(0px)"},
-{transform:"translateY(110vh)"}
-],
-{
-duration:3000 + Math.random()*2000
-}
-);
-
-setTimeout(()=>{
-heart.remove();
-},5000);
+    surpriseSection.scrollIntoView({
+        behavior: "smooth"
+    });
 
 }
-
-});
